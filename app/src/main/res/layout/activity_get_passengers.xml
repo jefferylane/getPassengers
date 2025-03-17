@@ -1,3 +1,11 @@
+<!--Jeffery Lane
+    CS3013-001 Spring 2025
+    Get Passengers App
+
+    activity_get_passengers.xml
+
+    This file contains the details of all the elements that appear
+    on the screen in the get passengers activity.-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

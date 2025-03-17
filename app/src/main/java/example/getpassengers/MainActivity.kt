@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     private var listText: TextView? = null
 
+    //Starts second activity, waits for result.
     private val startForResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { activityResult ->
             val data = activityResult.data
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    //Updated oncreate yo make listtext
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -45,16 +47,17 @@ class MainActivity : AppCompatActivity() {
         listText = findViewById(R.id.show_list)
     }
 
+    //Launch startForResult
     fun getList(v: View) {
         startForResult.launch(
             Intent(this, GetPassengers::class.java)
         )
     }
 }
-// Define the Passenger class with properties for first name, last name, and phone number
+//Defines the Passenger class
 class Passenger(var fName: String, var lName: String, var phone: String) {
 
-    // Override the toString() function to define how the object will be displayed as a string
+    //Overrides toString to be more readable
     override fun toString(): String {
         return "$fName $lName, Phone: $phone"
     }
