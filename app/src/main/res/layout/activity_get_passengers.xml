@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GetPassengers">
+
+    <!--Header-->
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Enter One Passenger"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:layout_margin="10dp"/>
+
+    <!--Secondary Linear Layout to get the first and last
+        name entry points on the same line.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <!--First name entry line.-->
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Enter First Name"/>
+
+        <!--Last name entry line.-->
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Enter Last Name"/>
+
+    </LinearLayout>
+
+    <!--Phone number entry line.-->
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:layout_margin="10dp"/>
+
+    <!--Button to add the details entered in the EditText fields above to a
+        passenger object.-->
+    <Button
+        android:id="@+id/add_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="enterPassenger"
+        android:text="ADD PASSENGER"
+        android:layout_margin="10dp"/>
+
+    <!--Button to return the list of passengers back to the main activity
+        screen and go back to that activity.-->
+    <Button
+        android:id="@+id/back_to_main"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="backToMain"
+        android:text="RETURN LIST"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+    <!--List of all currently added passengers.-->
+    <TextView
+        android:id="@+id/accum_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:textColor="@color/yellow"
+        android:textAlignment="center"
+        android:text="ACCUMULATING PASSENGER LIST\n-----------------------------"/>
+
+</LinearLayout>
